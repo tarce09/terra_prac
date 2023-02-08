@@ -9,3 +9,6 @@ resource "aws_instance" "multiple_ins" {
   }
 }
 
+module "new_mod_2" {
+  source = "github.com/tarce09/terra_prac/new_mod"
+}
