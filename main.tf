@@ -7,4 +7,5 @@ resource "aws_instance" "multiple_ins" {
     #Name = var.names[count.index]
     Name = each.value
   }
-  
+}
+
