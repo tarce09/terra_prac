@@ -3,7 +3,6 @@ resource "aws_instance" "multiple_ins" {
   for_each = toset(var.names)
   instance_type = "t2.micro"
   ami           = "ami-2757f631"
-  subnet_id = data.aws_subnet.selected.id
   tags = {
     #Name = var.names[count.index]
     Name = each.value
